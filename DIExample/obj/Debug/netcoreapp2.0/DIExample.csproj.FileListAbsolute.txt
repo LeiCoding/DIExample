@@ -1,0 +1,11 @@
+F:\github\DIExample\DIExample\DIExample\bin\Debug\netcoreapp2.0\DIExample.deps.json
+F:\github\DIExample\DIExample\DIExample\bin\Debug\netcoreapp2.0\DIExample.runtimeconfig.json
+F:\github\DIExample\DIExample\DIExample\bin\Debug\netcoreapp2.0\DIExample.runtimeconfig.dev.json
+F:\github\DIExample\DIExample\DIExample\bin\Debug\netcoreapp2.0\DIExample.dll
+F:\github\DIExample\DIExample\DIExample\bin\Debug\netcoreapp2.0\DIExample.pdb
+F:\github\DIExample\DIExample\DIExample\obj\Debug\netcoreapp2.0\DIExample.csprojResolveAssemblyReference.cache
+F:\github\DIExample\DIExample\DIExample\obj\Debug\netcoreapp2.0\DIExample.csproj.CoreCompileInputs.cache
+F:\github\DIExample\DIExample\DIExample\obj\Debug\netcoreapp2.0\DIExample.AssemblyInfoInputs.cache
+F:\github\DIExample\DIExample\DIExample\obj\Debug\netcoreapp2.0\DIExample.AssemblyInfo.cs
+F:\github\DIExample\DIExample\DIExample\obj\Debug\netcoreapp2.0\DIExample.dll
+F:\github\DIExample\DIExample\DIExample\obj\Debug\netcoreapp2.0\DIExample.pdb
