@@ -6,10 +6,12 @@ namespace DIExample
     {
         static void Main(string[] args)
         {
-            SqlServerDal dal = new SqlServerDal();
-            Order order = new Order(dal);
-
-            order.Add();
+            SqlServerDal dalsql = new SqlServerDal();
+            Order ordersql = new Order(dalsql);
+            ordersql.Add();
+            AccessDal dalacc = new AccessDal();
+            Order orderacc = new Order(dalacc);
+            orderacc.Add();
 
             Console.Read();
         }

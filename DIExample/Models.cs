@@ -17,7 +17,15 @@ namespace DIExample
     {
         public void Add()
         {
-            Console.WriteLine("Add a order");
+            Console.WriteLine("Add a order in sqlserver!");
+        }
+    }
+
+    public class AccessDal : IDataAccess
+    {
+        public void Add()
+        {
+            Console.WriteLine("Add a order in access！");
         }
     }
 
