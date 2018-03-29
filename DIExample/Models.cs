@@ -4,15 +4,39 @@ using System.Text;
 
 namespace DIExample
 {
-    class Models
+    //Inheritance example
+    public class Car
     {
-
+        public int chair = 4;
+        public virtual void Move(){ }
+        public void Stop()
+        {
+            Console.WriteLine("Stop");
+        }
     }
+
+    public class Audi : Car
+    {
+        public int tyre = 4;
+        public override void Move()
+        { Console.WriteLine("1K/H"); }
+        public void Gettyres()
+        {
+            Console.WriteLine(tyre);
+        }
+        public void Getchair()
+        {
+            Console.WriteLine(chair);
+        }
+    }
+    //end the example
+
     public interface IDataAccess
     {
         void Add();
     }
 
+    //constructor injection
     public class SqlServerDal : IDataAccess
     {
         public void Add()
@@ -32,7 +56,8 @@ namespace DIExample
     public class Order
     {
         private IDataAccess _ida;
-        public Order(IDataAccess ida)
+
+        public Order(IDataAccess ida)//constructor
         {
             _ida = ida;
         }
@@ -43,4 +68,41 @@ namespace DIExample
         }
     }
 
+    //property depedency
+    public class AnotherOrder
+    {
+        private IDataAccess _ida;
+                
+        public IDataAccess Ida//property
+        {
+            set { _ida = value; }
+            get { return _ida; }
+        }
+
+        public void Add()
+        {
+            _ida.Add();
+        }
+    }
+
+    //interface injection
+    public interface IDependent
+    {
+        void SetDependence(IDataAccess ida);
+    }
+
+    public class ThirdOrder:IDependent
+    {
+        private IDataAccess _ida;
+        
+        public void SetDependence(IDataAccess ida)
+        {
+            _ida = ida;
+        }
+
+        public void Add()
+        {
+            _ida.Add();
+        }
+    }
 }
