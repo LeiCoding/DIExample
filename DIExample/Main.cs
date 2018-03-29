@@ -1,4 +1,5 @@
 ﻿using System;
+using Ninject;
 
 namespace DIExample
 {
@@ -27,7 +28,7 @@ namespace DIExample
             Order orderacc = new Order(dalacc);
             orderacc.Add();
 
-            //property depedency
+            //property dependency
             SqlServerDal anotherdal = new SqlServerDal();
             AnotherOrder anotherorder = new AnotherOrder();
             anotherorder.Ida = anotherdal;
@@ -38,6 +39,12 @@ namespace DIExample
             ThirdOrder thirdorder = new ThirdOrder();
             thirdorder.SetDependence(thirddal);
             thirdorder.Add();
+
+            //using framework
+            StandardKernel kernel = new StandardKernel();//create container
+            kernel.Bind<IDataAccess>().To<SqlServerDal>();//state dependency
+            Order fourthorder = kernel.Get<Order>();
+            fourthorder.Add();
 
             Console.Read();
         }

@@ -68,7 +68,7 @@ namespace DIExample
         }
     }
 
-    //property depedency
+    //property dependency
     public class AnotherOrder
     {
         private IDataAccess _ida;
