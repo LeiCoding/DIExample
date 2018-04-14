@@ -7,16 +7,16 @@ namespace DIExample
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Inheritance example:");
-            //Inheritance example
-            Car car = new Car();
-            Audi audi = new Audi();
-            car = audi;
-            car.Move();//parent can get child property and motheds which inherit from itself
-            car.Stop();
-            audi.Gettyres();//parent can not use any child's own properties and motheds
-            audi.Stop();//child has the mothed from its parent by hidden
-            audi.Getchair();//child has the properties from its parent by hidden
+            //Console.WriteLine("Inheritance example:");
+            ////Inheritance example
+            //Car car = new Car();
+            //Audi audi = new Audi();
+            //car = audi;
+            //car.Move();//parent can get child property and motheds which inherit from itself
+            //car.Stop();
+            //audi.Gettyres();//parent can not use any child's own properties and motheds
+            //audi.Stop();//child has the mothed from its parent by hidden
+            //audi.Getchair();//child has the properties from its parent by hidden
 
             Console.WriteLine("\nDI example:");
             //constructor injection
